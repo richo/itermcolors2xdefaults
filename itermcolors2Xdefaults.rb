@@ -3,10 +3,12 @@
 #
 require 'plist'
 
+MOD = (ENV['ITERM_COLOR_MULTIPLIER'] || 1).to_f
+
 def as_default(k)
-  red = (k['Red Component'] * 100).to_i.to_s(16)
-  green = (k['Green Component'] * 100).to_i.to_s(16)
-  blue = (k['Blue Component'] * 100).to_i.to_s(16)
+  red = (k['Red Component'] * 100 * MOD).to_i.to_s(16)
+  green = (k['Green Component'] * 100 * MOD).to_i.to_s(16)
+  blue = (k['Blue Component'] * 100 * MOD).to_i.to_s(16)
 
   "##{red}#{green}#{blue}"
 end
