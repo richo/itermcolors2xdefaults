@@ -1,2 +1,10 @@
 Quick script to convert an iTermcolors file to a set of defaults usable
 by eg xterm or urxvt.
+
+The script depends on the plist gem, and in the case of an excessively
+bright or dark theme, you can specify a mutliplier to adjust the
+brightness, eg
+
+ITERM_COLOR_MULTIPLIER=2.5 ./itermcolors2Xdefaults.rb ~/Jellybeans.itermcolors
+
+enjoy!
